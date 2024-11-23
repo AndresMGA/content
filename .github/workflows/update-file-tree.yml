@@ -21,13 +21,42 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Generate file tree JSON
-      - name: Generate file tree JSON
-        run: |
-          # Create or overwrite file_tree.json with the repository file list
-          git ls-tree -r HEAD --name-only | jq -R -s -c 'split("\n") | map(select(. != ""))' > file_tree.json
+      # Step 2: Install Node.js (for JSON generation script)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Use a stable Node.js version
 
-      # Step 3: Commit and push changes
+      # Step 3: Generate hierarchical file tree JSON
+      - name: Generate hierarchical file tree JSON
+        run: |
+          # Create a Node.js script to generate the file tree
+          cat << 'EOF' > generateFileTree.js
+          const fs = require('fs');
+          const path = require('path');
+
+          function generateTree(dir) {
+              const result = {};
+              fs.readdirSync(dir).forEach(file => {
+                  const fullPath = path.join(dir, file);
+                  const stats = fs.statSync(fullPath);
+                  if (stats.isDirectory()) {
+                      result[file] = generateTree(fullPath);
+                  } else {
+                      result[file] = null; // Files are represented as null
+                  }
+              });
+              return result;
+          }
+
+          const tree = generateTree('.');
+          fs.writeFileSync('file_tree.json', JSON.stringify(tree, null, 2));
+          EOF
+
+          # Run the script
+          node generateFileTree.js
+
+      # Step 4: Commit and push changes
       - name: Commit and push changes
         run: |
           # Configure Git
