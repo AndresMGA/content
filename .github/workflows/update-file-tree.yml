@@ -38,10 +38,14 @@ jobs:
           function generateTree(dir) {
               const result = {};
               fs.readdirSync(dir).forEach(file => {
+                  // Ignore hidden files and directories
+                  if (file.startsWith('.')) return;
+
                   const fullPath = path.join(dir, file);
                   const stats = fs.statSync(fullPath);
+
                   if (stats.isDirectory()) {
-                      result[file] = generateTree(fullPath);
+                      result[file] = generateTree(fullPath); // Recurse into subdirectories
                   } else {
                       result[file] = null; // Files are represented as null
                   }
@@ -49,6 +53,7 @@ jobs:
               return result;
           }
 
+          // Generate the tree for the current directory
           const tree = generateTree('.');
           fs.writeFileSync('file_tree.json', JSON.stringify(tree, null, 2));
           EOF
