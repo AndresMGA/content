@@ -65,17 +65,22 @@ jobs:
           fs.writeFileSync('file_tree.json', JSON.stringify(tree, null, 2));
           EOF
 
+          # Add generateFileTree.js to Git
+          git add generateFileTree.js
+
           # Run the script
           node generateFileTree.js
 
-      # Step 4: Push the generated `file_tree.json` to the target repository (AndresMGA.github.io)
-      - name: Push file_tree.json to AndresMGA.github.io
+      # Step 4: Push the generated `file_tree.json` to the target repository (AndresMGA/content_tree)
+      - name: Push file_tree.json to AndresMGA/content_tree
         run: |
           # Configure Git for the source repository (where the action runs)
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          # Commit and push changes to the AndresMGA.github.io repository
+          # Commit the generated file_tree.json to the repository
           git add file_tree.json
           git commit -m "Update file_tree.json [skip ci]"
+          
+          # Push changes to the AndresMGA/content_tree repository
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/AndresMGA/content_tree.git
