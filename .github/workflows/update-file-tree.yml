@@ -78,4 +78,4 @@ jobs:
           # Commit and push changes to the AndresMGA.github.io repository
           git add file_tree.json
           git commit -m "Update file_tree.json [skip ci]"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/AndresMGA/AndresMGA.github.io.git
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/AndresMGA/content_tree.git
