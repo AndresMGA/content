@@ -3,10 +3,10 @@ name: Update File Tree JSON
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
+      - main  # Trigger on changes to the main branch of the source repo
   pull_request:
     branches:
-      - main  # Optional: Trigger on pull requests to the main branch
+      - main  # Optional: Trigger on pull requests to the main branch of the source repo
   workflow_dispatch:  # Allow manual execution of the workflow
 
 permissions:
@@ -17,9 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout repository
+      # Step 1: Checkout the source repository (AndresMGA/content)
+      - name: Checkout source repository
         uses: actions/checkout@v3
+        with:
+          repository: AndresMGA/content  # Checkout the source repository
 
       # Step 2: Install Node.js (for JSON generation script)
       - name: Setup Node.js
@@ -66,18 +68,14 @@ jobs:
           # Run the script
           node generateFileTree.js
 
-      # Step 4: Commit and push changes
-      - name: Commit and push changes
+      # Step 4: Push the generated `file_tree.json` to the target repository (AndresMGA.github.io)
+      - name: Push file_tree.json to AndresMGA.github.io
         run: |
-          # Configure Git
+          # Configure Git for the source repository (where the action runs)
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          # Stage and commit the file
+          # Commit and push changes to the AndresMGA.github.io repository
           git add file_tree.json
-          git commit -m "Update file_tree.json [skip ci]" || echo "No changes to commit"
-
-          # Push the changes back to the branch
-          git push origin ${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Update file_tree.json [skip ci]"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/AndresMGA/AndresMGA.github.io.git
