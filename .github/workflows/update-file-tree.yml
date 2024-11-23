@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main  # Optional: Trigger on pull requests to the main branch
+  workflow_dispatch:  # Allow manual execution of the workflow
 
 permissions:
   contents: write  # Ensure the token has write permissions to commit changes
