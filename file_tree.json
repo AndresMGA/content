@@ -1,1 +1,223 @@
-[".DS_Store",".github/.gitkeep",".github/workflows/update-file-tree.yml","file_tree.json","technical_exercises/.DS_Store","technical_exercises/Sheet/1001_C_Major_Scale_Patterns_1_d.mscx","technical_exercises/Sheet/1002_C_Major_Scale_Patterns_2_d.mscx","technical_exercises/Sheet/1003_C_Major_Scale_Patterns_3_d.mscx","technical_exercises/Sheet/1004_C_Major_Scale_Patterns_4_d.mscx","technical_exercises/Sheet/1005_C_Major_Scale_Patterns_5_d.mscx","technical_exercises/Sheet/1006_C_Major_Scale_Patterns_6_d.mscx","technical_exercises/Sheet/1007_C_Major_Scale_Patterns_7_d.mscx","technical_exercises/Sheet/1008_C_Major_Scale_Patterns_8_d.mscx","technical_exercises/Sheet/1009_C_Major_Scale_patterns_9_d.mscx","technical_exercises/Sheet/1010_C_Major_Scale_Patterns_10_d.mscx","technical_exercises/Sheet/1011_C_Major_Scale_Patterns_11_d.mscx","technical_exercises/Sheet/1012_C_Major_Scale_Patterns_12_d.mscx","technical_exercises/Sheet/1013_C_Major_Scale_Patterns_13_d.mscx","technical_exercises/Sheet/1014_C_Major_Scale_Patterns_14_d.mscx","technical_exercises/Sheet/1015_C_Major_Scale_Patterns_15_d.mscx","technical_exercises/Sheet/1016_C_Major_Scale_Patterns_16_d.mscx","technical_exercises/Sheet/1017_C_Major_Scale_Patterns_17_d.mscx","technical_exercises/Sheet/1018_C_Major_Scale_Patterns_18_d.mscx","technical_exercises/Sheet/1019_C_Major_Scale_Patterns_19_d.mscx","technical_exercises/Sheet/1020_C_Major_Scale_Patterns_20_d.mscx","technical_exercises/Sheet/1021_C_Major_Scale_Patterns_21_d.mscx","technical_exercises/Sheet/1022_C_Major_Scale_Patterns_22_d.mscx","technical_exercises/Sheet/1023_C_Major_Scale_Patterns_23_d.mscx","technical_exercises/Sheet/1024_C_Major_Scale_Patterns_24_d.mscx","technical_exercises/Sheet/1025_C_Major_Scale_Patterns_25_d.mscx","technical_exercises/Sheet/1026_C_Major_Scale_Patterns_26_d.mscx","technical_exercises/Sheet/1027_C_Major_Scale_Patterns_27_d.mscx","technical_exercises/Sheet/1028_C_Major_Scale_Patterns_28_d.mscx","technical_exercises/Sheet/1029_C_Major_Scale_Patterns_29_d.mscx","technical_exercises/Sheet/1030_C_Major_Scale_Patterns_30_d.mscx"]
+{
+  ".DS_Store": null,
+  ".git": {
+    "FETCH_HEAD": null,
+    "HEAD": null,
+    "branches": {},
+    "config": null,
+    "description": null,
+    "hooks": {
+      "applypatch-msg.sample": null,
+      "commit-msg.sample": null,
+      "fsmonitor-watchman.sample": null,
+      "post-update.sample": null,
+      "pre-applypatch.sample": null,
+      "pre-commit.sample": null,
+      "pre-merge-commit.sample": null,
+      "pre-push.sample": null,
+      "pre-rebase.sample": null,
+      "pre-receive.sample": null,
+      "prepare-commit-msg.sample": null,
+      "push-to-checkout.sample": null,
+      "sendemail-validate.sample": null,
+      "update.sample": null
+    },
+    "index": null,
+    "info": {
+      "exclude": null
+    },
+    "logs": {
+      "HEAD": null,
+      "refs": {
+        "heads": {
+          "main": null
+        },
+        "remotes": {
+          "origin": {
+            "main": null
+          }
+        }
+      }
+    },
+    "objects": {
+      "12": {
+        "f6fbb5106e4cc64f83971f3842cc167fa064ac": null
+      },
+      "15": {
+        "b1360380712c59ec9d2498d003084e6bf22d5a": null
+      },
+      "18": {
+        "6e80082259d494da9f93252b3e836f6e034dcc": null
+      },
+      "20": {
+        "ddd113027acc7f9066fdaa1a65861ff2c46515": null
+      },
+      "25": {
+        "db2fcd7d629e760c3ef13f3f9eafe2e1f78145": null
+      },
+      "26": {
+        "2dfbdfce52988513e7bff00059a56f71eb9847": null
+      },
+      "37": {
+        "b624fcc9d954dc611dce51a7fa0f63b5145af5": null
+      },
+      "45": {
+        "3ca2ff0bc9a1218770f5710bc03d8f6f17285e": null
+      },
+      "46": {
+        "4d5579d937b65a39079cafd06ccf19d8ce1185": null
+      },
+      "62": {
+        "43610f4e901e07ad9312b33f2f4b1fc94a25b6": null
+      },
+      "63": {
+        "8fde5b61e5ad2e6f2453caff9a2293bcec80b2": null
+      },
+      "68": {
+        "196437d0e70aaa433d555487c2d02318943d1d": null
+      },
+      "69": {
+        "33efe03c29b73d2215b4b86e84dd0af4bdf2ec": null
+      },
+      "74": {
+        "3a5a0d5e1504cd6b281ae731ead4abf3a14b7f": null
+      },
+      "02": {
+        "e4f639e719e4c94e72c7e65ed4abffd6e0b1d6": null
+      },
+      "05": {
+        "7301f40b0889d40a3097b0f23cf85faba6939b": null
+      },
+      "06": {
+        "7b7233e70dc90fb9e429598a1439c6563a8350": null
+      },
+      "07": {
+        "009f8f0b5a4c1c6276aed028ca0b7876645731": null,
+        "786163fa9f2d6b8932a210b0c03da78ebe23ba": null
+      },
+      "4e": {
+        "c476c78ca7c17379d9bffd1ecbae0e98bdbdff": null
+      },
+      "5a": {
+        "ecdd42288004f9eeaf778518d3779a2896a8c9": null
+      },
+      "5d": {
+        "bedff19d12bd4d4512eba12cb00d42ac73077f": null
+      },
+      "7f": {
+        "824b8a7e0a66a9572830188b2f77b1dc99b895": null
+      },
+      "8c": {
+        "ea24601e1a76081278f7c73582ebc3991d3de6": null
+      },
+      "8e": {
+        "395259336db2338be06b034cb4005cfb90b246": null
+      },
+      "9a": {
+        "c9c51e0c57605ecc7dd610b586ff25b374f41e": null
+      },
+      "9d": {
+        "c71d3766360c2ac1becb4b6dcabe5f729f821e": null
+      },
+      "9e": {
+        "83728c13976f876eed38f1bf7d42b119612f58": null
+      },
+      "a0": {
+        "56debdaf9565a995c27e46d94af6159b43820d": null
+      },
+      "a2": {
+        "be9fa36f46591e6265e5b0e8a7290477b855ab": null
+      },
+      "b3": {
+        "9b10da335270990cdd04981efa20329a892cbb": null
+      },
+      "ba": {
+        "23a0142f1e0ac59237b50b25a283c1ebca691f": null
+      },
+      "be": {
+        "5daeccb8e68f1f8c994ec54ba7788b4238a7dd": null
+      },
+      "cc": {
+        "cd15121b048ecff28f6431fc1476fc9f03f410": null
+      },
+      "cd": {
+        "5133c549c67252561f2addea8748d895b6d5d7": null
+      },
+      "cf": {
+        "acb54ca4813dde078fd8a6e692d5239952e4ad": null
+      },
+      "d7": {
+        "0ebac62a48b835deac2f8f68df89713291b86e": null
+      },
+      "d8": {
+        "358d1072cb0f449bdaea1e66ec09a2154c9b41": null
+      },
+      "df": {
+        "ecb076de640359b029e370e72aad9ac1d2e90b": null
+      },
+      "ed": {
+        "173177a782ce09a1c18a89d5f42299f2c6ff5d": null
+      },
+      "f3": {
+        "c33ada1bdccec052089bd568a1d6d919da7f8c": null
+      },
+      "info": {},
+      "pack": {}
+    },
+    "refs": {
+      "heads": {
+        "main": null
+      },
+      "remotes": {
+        "origin": {
+          "main": null
+        }
+      },
+      "tags": {}
+    },
+    "shallow": null
+  },
+  ".github": {
+    ".gitkeep": null,
+    "workflows": {
+      "update-file-tree.yml": null
+    }
+  },
+  "file_tree.json": null,
+  "generateFileTree.js": null,
+  "technical_exercises": {
+    ".DS_Store": null,
+    "Sheet": {
+      "1001_C_Major_Scale_Patterns_1_d.mscx": null,
+      "1002_C_Major_Scale_Patterns_2_d.mscx": null,
+      "1003_C_Major_Scale_Patterns_3_d.mscx": null,
+      "1004_C_Major_Scale_Patterns_4_d.mscx": null,
+      "1005_C_Major_Scale_Patterns_5_d.mscx": null,
+      "1006_C_Major_Scale_Patterns_6_d.mscx": null,
+      "1007_C_Major_Scale_Patterns_7_d.mscx": null,
+      "1008_C_Major_Scale_Patterns_8_d.mscx": null,
+      "1009_C_Major_Scale_patterns_9_d.mscx": null,
+      "1010_C_Major_Scale_Patterns_10_d.mscx": null,
+      "1011_C_Major_Scale_Patterns_11_d.mscx": null,
+      "1012_C_Major_Scale_Patterns_12_d.mscx": null,
+      "1013_C_Major_Scale_Patterns_13_d.mscx": null,
+      "1014_C_Major_Scale_Patterns_14_d.mscx": null,
+      "1015_C_Major_Scale_Patterns_15_d.mscx": null,
+      "1016_C_Major_Scale_Patterns_16_d.mscx": null,
+      "1017_C_Major_Scale_Patterns_17_d.mscx": null,
+      "1018_C_Major_Scale_Patterns_18_d.mscx": null,
+      "1019_C_Major_Scale_Patterns_19_d.mscx": null,
+      "1020_C_Major_Scale_Patterns_20_d.mscx": null,
+      "1021_C_Major_Scale_Patterns_21_d.mscx": null,
+      "1022_C_Major_Scale_Patterns_22_d.mscx": null,
+      "1023_C_Major_Scale_Patterns_23_d.mscx": null,
+      "1024_C_Major_Scale_Patterns_24_d.mscx": null,
+      "1025_C_Major_Scale_Patterns_25_d.mscx": null,
+      "1026_C_Major_Scale_Patterns_26_d.mscx": null,
+      "1027_C_Major_Scale_Patterns_27_d.mscx": null,
+      "1028_C_Major_Scale_Patterns_28_d.mscx": null,
+      "1029_C_Major_Scale_Patterns_29_d.mscx": null,
+      "1030_C_Major_Scale_Patterns_30_d.mscx": null
+    }
+  }
+}
