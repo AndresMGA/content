@@ -1,1 +1,43 @@
 
+name: Update File Tree JSON
+
+on:
+  push:
+    branches:
+      - main  # Trigger on changes to the main branch
+  pull_request:
+    branches:
+      - main  # Optional: Trigger on pull requests to the main branch
+
+jobs:
+  update-file-tree:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Generate file tree JSON
+    - name: Generate file tree JSON
+      run: |
+        # Generate the file tree JSON
+        git ls-tree -r HEAD --name-only | jq -R -s -c 'split("\n") | map(select(. != ""))' > file_tree.json
+
+    # Step 3: Commit and push the changes
+    - name: Commit and push changes
+      run: |
+        # Configure Git
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+
+        # Add file_tree.json
+        git add file_tree.json
+
+        # Commit the changes (if any)
+        git commit -m "Update file_tree.json [skip ci]" || echo "No changes to commit"
+
+        # Push the changes back to the repository
+        git push origin ${{ github.ref_name }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
