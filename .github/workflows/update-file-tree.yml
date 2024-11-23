@@ -35,7 +35,7 @@ jobs:
           const fs = require('fs');
           const path = require('path');
 
-          function generateTree(dir) {
+          function generateTree(dir, isRoot = false) {
               const result = {};
               fs.readdirSync(dir).forEach(file => {
                   // Ignore hidden files and directories
@@ -43,6 +43,9 @@ jobs:
 
                   const fullPath = path.join(dir, file);
                   const stats = fs.statSync(fullPath);
+
+                  // Ignore files at the root level
+                  if (isRoot && stats.isFile()) return;
 
                   if (stats.isDirectory()) {
                       result[file] = generateTree(fullPath); // Recurse into subdirectories
@@ -53,8 +56,8 @@ jobs:
               return result;
           }
 
-          // Generate the tree for the current directory
-          const tree = generateTree('.');
+          // Generate the tree for the current directory (root)
+          const tree = generateTree('.', true);
           fs.writeFileSync('file_tree.json', JSON.stringify(tree, null, 2));
           EOF
 
