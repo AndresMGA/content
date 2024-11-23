@@ -50,7 +50,7 @@ jobs:
                   if (stats.isDirectory()) {
                       result[file] = generateTree(fullPath); // Recurse into subdirectories
                   } else {
-                      result[file] = null; // For files, just add as a string (key without value)
+                      result[file] = null; // For files, just add as objects with null value
                   }
               });
               return result;
@@ -59,20 +59,7 @@ jobs:
           // Generate the tree for the current directory (root)
           const tree = generateTree('.', true);
 
-          // Clean up by removing null values (so files will just be listed as strings)
-          function cleanTree(obj) {
-              for (const key in obj) {
-                  if (obj[key] === null) {
-                      obj[key] = key; // Convert file entries to simple strings (file names)
-                  } else if (typeof obj[key] === 'object') {
-                      cleanTree(obj[key]); // Recursively clean nested objects
-                  }
-              }
-          }
-
-          cleanTree(tree);
-
-          // Write the cleaned file tree to the file
+          // Write the generated tree to a JSON file
           fs.writeFileSync('file_tree.json', JSON.stringify(tree, null, 2));
           EOF
 
