@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Check out the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -20,22 +20,16 @@ jobs:
           tree -J > file_tree.json
           echo "File tree generated."
 
-      # Step 3: Configure Git for Push
-      - name: Configure Git for Push
+      # Step 3: Commit and push the JSON file back to the repository
+      - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      # Step 4: Set remote URL to push to `AndresMGA.github.io`
-      - name: Set Remote Repository URL
-        run: |
-          git remote set-url origin https://github.com/AndresMGA/AndresMGA.github.io.git
-
-      # Step 5: Add, commit, and push the JSON file to `AndresMGA.github.io`
-      - name: Commit and Push File Tree to GitHub Pages Repository
+      - name: Commit and Push File Tree
         run: |
           git add file_tree.json
-          git diff --quiet || git commit -m "Generate file tree JSON"
-          git push origin main
+          git commit -m "Generate file tree JSON"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
