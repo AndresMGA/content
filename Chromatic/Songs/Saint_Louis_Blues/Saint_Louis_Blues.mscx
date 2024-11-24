@@ -1528,24 +1528,7 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>10</height>
-        <leftMargin>5</leftMargin>
-        <rightMargin>5</rightMargin>
-        <topMargin>5</topMargin>
-        <bottomMargin>5</bottomMargin>
-        <linkedMain />
-        <Text>
-          <linkedMain />
-          <style>Title</style>
-          <text><font face="Times New Roman" />Saint Louis Blues (1917)</text>
-          </Text>
-        <Text>
-          <linkedMain />
-          <style>Composer</style>
-          <text><font face="Times New Roman" />W. C. Handy (1873 - 1958)</text>
-          </Text>
-        </VBox>
+
       <Measure>
         <voice>
           <Clef>
@@ -3977,31 +3960,6 @@
           </Instrument>
         </Part>
       <Staff id="1">
-        <VBox>
-          <height>10</height>
-          <leftMargin>4.99969</leftMargin>
-          <rightMargin>4.99969</rightMargin>
-          <topMargin>4.99969</topMargin>
-          <bottomMargin>4.99969</bottomMargin>
-          <linked>
-            </linked>
-          <Text>
-            <linked>
-              </linked>
-            <style>Title</style>
-            <text><font face="Times New Roman" />Saint Louis Blues (1917)</text>
-            </Text>
-          <Text>
-            <linked>
-              </linked>
-            <style>Composer</style>
-            <text><font face="Times New Roman" />W. C. Handy (1873 - 1958)</text>
-            </Text>
-          <Text>
-            <style>Instrument Name (Part)</style>
-            <text>Saint Louis Blues - melodia</text>
-            </Text>
-          </VBox>
         <Measure>
           <voice>
             <Clef>

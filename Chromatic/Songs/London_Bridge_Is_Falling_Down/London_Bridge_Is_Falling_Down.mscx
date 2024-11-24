@@ -207,13 +207,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Title</style>
-          <text>London bridge is falling down</text>
-          </Text>
-        </VBox>
       <Measure>
         <voice>
           <TimeSig>

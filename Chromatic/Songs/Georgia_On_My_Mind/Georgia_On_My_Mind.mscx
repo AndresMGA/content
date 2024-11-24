@@ -327,14 +327,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>7</height>
-        <bottomGap>8.33333</bottomGap>
-        <Text>
-          <style>Title</style>
-          <text>Georgia on my Mind</text>
-          </Text>
-        </VBox>
       <Measure>
         <voice>
           <KeySig>

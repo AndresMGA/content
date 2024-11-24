@@ -211,14 +211,6 @@ Arranged by Banuwarsa</metaTag>
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>9.5</height>
-        <Text>
-          <style>Title</style>
-          <text><font size="22.0128" /><font face="FreeSerif" />Air on G String
-</text>
-          </Text>
-        </VBox>
       <Measure>
         <voice>
           <KeySig>

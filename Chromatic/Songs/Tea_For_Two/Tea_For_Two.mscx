@@ -217,13 +217,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>4.61975</height>
-        <Text>
-          <style>Title</style>
-          <text>TEA FOR TWO</text>
-          </Text>
-        </VBox>
       <Measure>
         <voice>
           <TimeSig>

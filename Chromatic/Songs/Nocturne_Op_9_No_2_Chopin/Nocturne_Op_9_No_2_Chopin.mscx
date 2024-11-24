@@ -189,18 +189,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>16.5619</height>
-        <bottomGap>7.04576</bottomGap>
-        <Text>
-          <style>Title</style>
-          <text>Nocturne, Op. 9, No. 2</text>
-          </Text>
-        <Text>
-          <style>Composer</style>
-          <text>Frederic Chopin (1810-1849)</text>
-          </Text>
-        </VBox>
       <Measure>
         <stretch>1.1</stretch>
         <voice>

@@ -1634,22 +1634,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>16.0228</height>
-        <Text>
-          <style>Title</style>
-          <text>Eine Kleine Nachtmusik K.525 I. Allegro </text>
-          </Text>
-        <Text>
-          <style>Composer</style>
-          <text>W.A. Mozart
-Arr. Artlejandra</text>
-          </Text>
-        <Text>
-          <style>Subtitle</style>
-          <text>Una pequeña serenata nocturna K.525 I. Allegro</text>
-          </Text>
-        </VBox>
       <Measure>
         <startRepeat />
         <stretch>0.5</stretch>
