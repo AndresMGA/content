@@ -1,40 +1,31 @@
 import os
-import shutil
 
-# Paths to the directories
-json_path = './json'
-chromatic_path = './chromatic'
-diatonic_path = './diatonic'
+# Path to the chromatic directory
+chromatic_path = './Diatonic'
 
-# Function to find the matching folder recursively
-def find_matching_folder(base_name, root_paths):
-    for root_path in root_paths:
-        for dirpath, dirnames, filenames in os.walk(root_path):
-            if os.path.basename(dirpath) == base_name:
-                return dirpath
-    return None
+# Function to convert a string to Title Case
+def to_title_case(name):
+    return '_'.join([word.capitalize() for word in name.split('_')])
 
-# List of root directories to search for matching folders
-search_paths = [chromatic_path, diatonic_path]
-
-# Iterate through all .json files in ./json
-for root, dirs, files in os.walk(json_path):
+# Traverse the directory structure
+for root, dirs, files in os.walk(chromatic_path, topdown=False):  # Process files and subdirectories first
+    # Rename files
     for file in files:
-        if file.endswith('.json'):
-            # Full path of the JSON file
-            json_file_path = os.path.join(root, file)
-            
-            # Base name of the JSON file (without extension)
-            base_name = os.path.splitext(file)[0]
-            
-            # Find the matching folder recursively
-            matching_folder = find_matching_folder(base_name, search_paths)
-            
-            if matching_folder:
-                # Copy the JSON file into the matching folder
-                destination_path = os.path.join(matching_folder, file)
-                shutil.copy(json_file_path, destination_path)
-                print(f"Copied {json_file_path} to {destination_path}")
-            else:
-                # If no matching folder is found
-                print(f"No matching folder found for {json_file_path}")
+        old_file_path = os.path.join(root, file)
+        new_file_name = to_title_case(file)
+        new_file_path = os.path.join(root, new_file_name)
+        if old_file_path != new_file_path:  # Prevent unnecessary renames
+            os.rename(old_file_path, new_file_path)
+            print(f"Renamed file: {old_file_path} -> {new_file_path}")
+
+    # Rename directories
+    for dir in dirs:
+        old_dir_path = os.path.join(root, dir)
+        new_dir_name = to_title_case(dir)
+        new_dir_path = os.path.join(root, new_dir_name)
+        if old_dir_path != new_dir_path:  # Prevent unnecessary renames
+            try:
+                os.rename(old_dir_path, new_dir_path)
+                print(f"Renamed directory: {old_dir_path} -> {new_dir_path}")
+            except OSError as e:
+                print(f"Error renaming directory: {old_dir_path} -> {new_dir_path} | {e}")
