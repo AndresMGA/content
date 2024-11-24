@@ -12,6 +12,9 @@
       <pagePrintableWidth>7.4826</pagePrintableWidth>
       <createMultiMeasureRests>1</createMultiMeasureRests>
       <Spatium>1.76389</Spatium>
+      <titleFramePadding>0.5</titleFramePadding>
+      <titleFrameWidth>0.2</titleFrameWidth>
+      <titleFrameRound>25</titleFrameRound>
       </Style>
     <showInvisible>1</showInvisible>
     <showUnprintable>1</showUnprintable>
