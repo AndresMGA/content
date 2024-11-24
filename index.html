@@ -138,19 +138,19 @@
             directoryContentsList.innerHTML = ''; // Clear previous contents
             
             currentList.innerHTML = parentName + " / "+ item.name;
-            contents.forEach(item => {
+            contents.forEach(song => {
                 const li = document.createElement('li');
-                li.textContent = item.name;
-                if (item.type === 'directory') {
+                li.textContent = song.name;
+                if (song.type === 'directory') {
                     li.classList.add('subdirectory');
                     // Add click event to open subdirectory contents in the middle panel
                     li.addEventListener('click', (e) => {
+                        svg_path = "https://raw.githubusercontent.com/AndresMGA/content/refs/heads/main/"+parentName+"/" + item.name +"/"+song.name+"/"+song.name+"-1.svg";
                         e.stopPropagation(); // Prevent parent click
-                        populateDirectoryContents(item.contents);
+                        //console.log(svg_path)
+                        window.open(svg_path, '_blank');
                     });
-                } else if (item.type === 'file') {
-                    li.classList.add('file');
-                }
+                } 
                 directoryContentsList.appendChild(li);
             });
         }
