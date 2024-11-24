@@ -1,0 +1,51 @@
+write a web page that reads https://raw.githubusercontent.com/AndresMGA/content/refs/heads/main/file_tree.json
+
+(will be something like 
+
+[
+  {"type":"directory","name":".","contents":[
+    {"type":"directory","name":"Chromatic","contents":[
+      {"type":"directory","name":"Arpeggios","contents":[
+        {"type":"directory","name":"A_7","contents":[
+          {"type":"file","name":"A_7.json"},
+          {"type":"file","name":"A_7.mscx"}
+      ]},
+        {"type":"directory","name":"A_Dim_7","contents":[
+          {"type":"file","name":"A_Dim_7.json"},
+          {"type":"file","name":"A_Dim_7.mscx"}
+      ]},
+        {"type":"directory","name":"A_Maj7","contents":[
+          {"type":"file","name":"A_Maj7.json"},
+          {"type":"file","name":"A_Maj7.mscx"}
+      ]},
+        {"type":"directory","name":"A_Min7","contents":[
+          {"type":"file","name":"A_Min7.json"},
+          {"type":"file","name":"A_Min7.mscx"}
+      ]},
+        {"type":"directory","name":"A_Min_7b_5","contents":[
+          {"type":"file","name":"A_Min_7b_5.json"},
+          {"type":"file","name":"A_Min_7b_5.mscx"}
+      ]},
+        {"type":"directory","name":"A_Minor_Arpeggio","contents":[
+          {"type":"file","name":"A_Minor_Arpeggio.json"},
+          {"type":"file","name":"A_Minor_Arpeggio.mscx"}
+
+          .....
+)
+
+shows the data nicely with the following structure
+
+LEFT SIDE PANEL
+
+root_directory_1
+----- child_1 of root_directory_1 
+----- child_2 of root_directory_1
+----- child_3 of root_directory_1
+root_directory_2
+----- child_1 of root_directory_2
+----- child_2 of root_directory_2
+----- child_3 of root_directory_2
+
+MIDDLE PANEL
+
+    should show the subdirectory list when childs if root directories are clicked
