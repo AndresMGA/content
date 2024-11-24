@@ -162,14 +162,6 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>10</height>
-        <boxAutoSize>0</boxAutoSize>
-        <Text>
-          <style>Title</style>
-          <text>A hunting we will go</text>
-          </Text>
-        </VBox>
       <Measure>
         <voice>
           <TimeSig>

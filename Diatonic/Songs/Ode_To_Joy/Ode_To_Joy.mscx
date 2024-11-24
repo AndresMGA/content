@@ -200,14 +200,7 @@
         </Instrument>
       </Part>
     <Staff id="1">
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Title</style>
-          <offset x="-2.26251" y="1.9797" />
-          <text>Ode to Joy</text>
-          </Text>
-        </VBox>
+
       <Measure>
         <stretch>3.2</stretch>
         <voice>
