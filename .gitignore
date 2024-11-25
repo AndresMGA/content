@@ -28,3 +28,4 @@ export_svgs.py
 missing_json.py
 script.py
 ./github/workflows
+file_tree.json
