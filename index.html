@@ -60,15 +60,19 @@
     </div>
 
     <script>
+
         // Fetch the JSON from GitHub
-        const jsonUrl = 'https://raw.githubusercontent.com/AndresMGA/content/refs/heads/main/file_tree.json';
+        const jsonUrl = 'https://raw.githubusercontent.com/AndresMGA/AndresMGA.github.io/refs/heads/main/file_tree.json';
 
         // Fetch the file tree data
         async function fetchFileTree() {
             try {
                 const response = await fetch(jsonUrl);
+               
                 const fileTree = await response.json();
-                populateRootDirectorie(fileTree);
+                const scoresDirectory = fileTree[0].contents.find(item => item.name === "Scores");
+                populateRootDirectorie(fileTree[0].contents);
+                
             } catch (error) {
                 console.error('Error fetching file tree:', error);
             }
@@ -145,7 +149,7 @@
                     li.classList.add('subdirectory');
                     // Add click event to open subdirectory contents in the middle panel
                     li.addEventListener('click', (e) => {
-                        svgPath = "https://raw.githubusercontent.com/AndresMGA/content/refs/heads/main/"+parentName+"/" + item.name +"/"+song.name+"/"+song.name+"-1.svg";
+                        svgPath = "https://raw.githubusercontent.com/AndresMGA/content/refs/heads/main/Scores/"+parentName+"/" + item.name +"/"+song.name+"/"+song.name+"-1.svg";
                         e.stopPropagation(); // Prevent parent click
                         //console.log(svg_path)
                         
